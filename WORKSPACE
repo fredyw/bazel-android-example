@@ -3,9 +3,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "rules_android",
-    sha256 = "d0b310dd23442b8ff024cba73ad7564024b473673d8d5de7d01bd91adb9aa2d0",
-    strip_prefix = "rules_android-dd7b90c91fdc4edeca90ba9ebffa3c469b426a35",
-    url = "https://github.com/bazelbuild/rules_android/archive/dd7b90c91fdc4edeca90ba9ebffa3c469b426a35.zip",
+    sha256 = "b1599e4604c1594a1b0754184c5e50f895a68f444d1a5a82b688b2370d990ba0",
+    strip_prefix = "rules_android-0.5.1",
+    url = "https://github.com/bazelbuild/rules_android/releases/download/v0.5.1/rules_android-v0.5.1.tar.gz",
 )
 
 load("@rules_android//:prereqs.bzl", "rules_android_prereqs")
