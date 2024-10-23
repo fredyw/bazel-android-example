@@ -2,6 +2,20 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
+    name = "rules_kotlin",
+    sha256 = "34e8c0351764b71d78f76c8746e98063979ce08dcf1a91666f3f3bc2949a533d",
+    url = "https://github.com/bazelbuild/rules_kotlin/releases/download/v1.9.5/rules_kotlin-v1.9.5.tar.gz",
+)
+
+load("@rules_kotlin//kotlin:repositories.bzl", "kotlin_repositories")
+
+kotlin_repositories()
+
+load("@rules_kotlin//kotlin:core.bzl", "kt_register_toolchains")
+
+kt_register_toolchains()
+
+http_archive(
     name = "rules_android",
     sha256 = "b1599e4604c1594a1b0754184c5e50f895a68f444d1a5a82b688b2370d990ba0",
     strip_prefix = "rules_android-0.5.1",
